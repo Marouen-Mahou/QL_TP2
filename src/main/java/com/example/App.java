@@ -17,12 +17,18 @@ public class App
         //Go to the website
         driver.get("https://www.tunisianet.com.tn/"); 
 
-        Thread.sleep(7000);
+        Thread.sleep(5000);
             
         //Go to login page
-        driver.findElement(By.xpath("/html/body/main/footer/div[3]/div[1]/div/div/div[2]/h3/a")).click();
+        driver.findElement(By.xpath("//*[@id=\"_desktop_user_info\"]/div")).click();
+        
+        Thread.sleep(5000);
       
+        //Go to login page
+        driver.findElement(By.xpath("/html/body/main/header/div[2]/div/div/div[2]/div[3]/ul/li/a")).click();
  
+        Thread.sleep(5000);
+        
         //Write email
         WebElement emailinput = driver.findElement(By.xpath( "/html/body/main/section/div/div/div/section/section/section/form/section/div[1]/div[1]/input" )) ;
         emailinput.sendKeys("test2021@email.com");
